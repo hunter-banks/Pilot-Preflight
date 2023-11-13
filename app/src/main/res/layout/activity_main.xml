@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3700BCD4"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:text="Welcome, Pilot!"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="50dp"
+        android:text="@string/imsafe_description"
+        android:textStyle="bold"
+        android:layout_below="@id/welcome_text"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <GridLayout
+        android:id="@+id/selector_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_text"
+        android:layout_centerHorizontal="true"
+        android:columnCount="1"
+        android:paddingHorizontal="50dp"
+        android:paddingTop="20dp"
+        >
+        <TextView
+            android:text="Select an Option Below:"
+            />
+
+        <Button
+            android:id="@+id/start_checklist_button"
+            android:text="Perform IMSAFE Checklist"
+            style="@style/landing_button"/>
+
+        <Button
+            android:id="@+id/review_regs_button"
+            style="@style/landing_button"
+            android:text="Review FAA Rules &amp; Regulations" />
+
+        <Button
+            android:id="@+id/past_results_button"
+            style="@style/landing_button"
+            android:text="Past Results" />
+
+        <Button
+            android:id="@+id/ame_resources_button"
+            style="@style/landing_button"
+            android:text="Aviation Medical Resources" />
+
+
+    </GridLayout>
+
+
+</RelativeLayout>

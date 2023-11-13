@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.appdev.pilot_preflight"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.appdev.pilot_preflight"
