@@ -1,45 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="43dp">
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Federal Aviation Regulations"
-            android:textSize="24sp"
             android:layout_centerHorizontal="true"
-            android:paddingTop="16dp"/>
+            android:paddingTop="16dp"
+            android:text="Federal Aviation Regulations"
+            android:textSize="24sp" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/titleTextView">
+            android:layout_height="498dp"
+            android:layout_above="@+id/linkTextView"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="116dp">
 
             <TextView
                 android:id="@+id/infoTextView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly...."
-                android:padding="16dp"/>
+                android:padding="16dp"
+                android:text="@string/regulations_text" />
+
         </ScrollView>
+
+<!--        <ImageView-->
+<!--        &lt;!&ndash;                android:id="@+id/regulations_text"&ndash;&gt;-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/regulations_text" />-->
 
         <TextView
             android:id="@+id/linkTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://www.faa.gov/regulations_policies"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:paddingBottom="16dp"/>
+            android:paddingBottom="16dp"
+            android:text="https://www.faa.gov/regulations_policies" />
 
     </RelativeLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
