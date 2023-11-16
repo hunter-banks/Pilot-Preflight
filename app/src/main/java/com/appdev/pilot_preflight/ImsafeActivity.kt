@@ -16,7 +16,6 @@ class ImsafeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imsafe)
-        setSupportActionBar(findViewById(R.id.imsafe_toolbar))
         illnessButton = findViewById(R.id.imsafe_continue_illness_button)
         illnessButton.setOnClickListener(this::continueIllness)
     }

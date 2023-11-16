@@ -13,14 +13,12 @@ class StressActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stress)
-        setSupportActionBar(findViewById(R.id.stress_toolbar))
         continueAlc = findViewById(R.id.imsafe_continue_alc_button)
         continueAlc.setOnClickListener(this::continueAlc)
     }
     private fun continueAlc(view: View) {
         intent = Intent(this, AlcoholActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -32,6 +30,8 @@ class StressActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.home -> {
                 // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }

@@ -5,20 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ImsafeActivity">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/imsafe_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
     <TextView
         android:id="@+id/imsafe_header_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imsafe_toolbar"
         android:text="@string/purpose_of_imsafe_evaluation"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
@@ -34,7 +26,6 @@
         />
     <Button
         android:id="@+id/imsafe_continue_illness_button"
-        android:padding="10px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imsafe_purpose_textview"

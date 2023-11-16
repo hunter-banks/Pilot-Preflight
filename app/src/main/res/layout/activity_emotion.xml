@@ -6,20 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".EmotionActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/emotion_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <TextView
         android:id="@+id/emotion_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/emotion_toolbar"
         android:text="@string/emotion"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
@@ -55,7 +46,6 @@
     </GridLayout>
     <Button
         android:id="@+id/imsafe_continue_home_button"
-        android:padding="10px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emotion_grid"

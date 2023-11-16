@@ -15,37 +15,47 @@
         <activity
             android:name=".EmotionActivity"
             android:label="Emotion"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".FatigueActivity"
             android:exported="false" />
         <activity
             android:name=".FatigueActivity"
             android:label="Fatigue"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".AlcoholActivity"
             android:exported="false" />
         <activity
             android:name=".AlcoholActivity"
             android:exported="false"
             android:label="Alcohol"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".StressActivity" />
         <activity
             android:name=".StressActivity"
             android:exported="false"
             android:label="Stress"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MedicationActivity" />
         <activity
             android:name=".MedicationActivity"
             android:exported="false"
             android:label="Medication"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".IllnessActivity" />
         <activity
             android:name=".IllnessActivity"
             android:exported="false"
             android:label="Illness"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ImsafeActivity" />
         <activity
             android:name=".ImsafeActivity"
             android:exported="false"
             android:label="IMSAFE Evaluation"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegulationsActivity"
+            android:exported="false"
+            android:label="Regulations Activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MedicalActivity"
+            android:exported="false"
+            android:label="Medical Activity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"

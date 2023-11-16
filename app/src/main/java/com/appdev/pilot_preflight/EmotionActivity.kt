@@ -13,13 +13,12 @@ class EmotionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emotion)
-        setSupportActionBar(findViewById(R.id.emotion_toolbar))
         continueHome = findViewById(R.id.imsafe_continue_home_button)
         continueHome.setOnClickListener(this::continueHomeFun)
     }
     private fun continueHomeFun(view: View) {
-//        intent = Intent(this, MedicationActivity::class.java)
-//        startActivity(intent)
+        intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         finish()
     }
 
@@ -32,6 +31,8 @@ class EmotionActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.home -> {
                 // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }

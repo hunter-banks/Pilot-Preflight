@@ -13,14 +13,12 @@ class FatigueActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fatigue)
-        setSupportActionBar(findViewById(R.id.fatigue_toolbar))
         continueEmotion = findViewById(R.id.imsafe_continue_emotion_button)
         continueEmotion.setOnClickListener(this::continueEmotionView)
     }
     private fun continueEmotionView(view: View) {
         intent = Intent(this, EmotionActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -32,6 +30,8 @@ class FatigueActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.home -> {
                 // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }

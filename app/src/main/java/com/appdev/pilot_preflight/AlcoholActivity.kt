@@ -13,14 +13,12 @@ class AlcoholActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alcohol)
-        setSupportActionBar(findViewById(R.id.alcohol_toolbar))
         continueFatigue = findViewById(R.id.imsafe_continue_fatigue_button)
         continueFatigue.setOnClickListener(this::continueFatigue)
     }
     private fun continueFatigue(view: View) {
         intent = Intent(this, FatigueActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -32,6 +30,8 @@ class AlcoholActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.home -> {
                 // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }

@@ -13,14 +13,12 @@ class MedicationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_medication)
-        setSupportActionBar(findViewById(R.id.medication_toolbar))
         continueStress = findViewById(R.id.imsafe_continue_stress_button)
         continueStress.setOnClickListener(this::continueStress)
     }
     private fun continueStress(view: View) {
         intent = Intent(this, StressActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -31,7 +29,8 @@ class MedicationActivity : AppCompatActivity() {
         // Determine which menu option was selected
         return when (item.itemId) {
             R.id.home -> {
-                // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }

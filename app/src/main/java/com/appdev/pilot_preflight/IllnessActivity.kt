@@ -14,14 +14,12 @@ class IllnessActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_illness)
-        setSupportActionBar(findViewById(R.id.illness_toolbar))
         continueMed = findViewById(R.id.imsafe_continue_med_button)
         continueMed.setOnClickListener(this::continueMedication)
     }
     private fun continueMedication(view: View) {
         intent = Intent(this, MedicationActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -32,7 +30,8 @@ class IllnessActivity : AppCompatActivity() {
         // Determine which menu option was selected
         return when (item.itemId) {
             R.id.home -> {
-                // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }
