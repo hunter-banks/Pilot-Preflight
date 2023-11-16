@@ -63,10 +63,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:paddingBottom="16dp"
-        android:onClick="openRegulations"
         android:text="Regulations Site" />
 
 <!--    </RelativeLayout>-->
+<!--
+        android:onClick="openRegulations"-->
 
 </RelativeLayout>
 

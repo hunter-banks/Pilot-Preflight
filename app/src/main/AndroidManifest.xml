@@ -58,6 +58,11 @@
             android:label="Medical Activity"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".PreviousEvaluations"
+            android:exported="false"
+            android:label="Previous Evaluations"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

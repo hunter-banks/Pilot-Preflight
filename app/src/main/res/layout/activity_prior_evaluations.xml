@@ -59,7 +59,7 @@
         android:background="@drawable/circular_button_background"
         android:src="@drawable/app_search_icon"
         android:contentDescription="Search"
-        android:onClick="onSearchButtonClick"
+
     />
 
     <View
