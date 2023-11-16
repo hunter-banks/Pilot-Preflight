@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3700BCD4"
+        />
+
+    <View
+        android:id="@+id/brownOverlay"
+        android:background="@drawable/rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/choose_profile_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a profile image"
+        android:textSize="25sp"
+        android:layout_marginLeft="35dp"
+        android:padding="16dp"
+        android:layout_marginTop="40dp"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:layout_below="@id/choose_profile_text_view"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/default_profile"
+                android:background="#00FFFFFF"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="30dp"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/default_profile"
+                android:background="#00FFFFFF"
+                android:layout_columnWeight="1"
+                app:tint="#FF0000" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#0000FF"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#00FF00"
+            android:layout_marginBottom="30dp"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#FFFF00"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#800080"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#FFA500"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#00FFFF"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            app:tint="#FF1493"
+            />
+
+        </GridLayout>
+
+
+    />
+
+
+
+</RelativeLayout>
