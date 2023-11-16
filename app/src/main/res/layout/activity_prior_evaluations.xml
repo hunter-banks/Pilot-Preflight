@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3700BCD4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/previous_exam_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous Exam Date"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+
+    />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/previous_exam_text_view"
+        android:layout_marginStart="55dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="20dp"
+        android:hint="Select Date -->"
+        android:focusable="false"
+        />
+
+    <ImageButton
+        android:id="@+id/calendarButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/dateEditText"
+        android:layout_below="@+id/previous_exam_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        android:scaleType="fitCenter"
+        android:onClick="showDatePicker"
+        android:contentDescription="Select a date."
+        />
+
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/calendarButton"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@id/previous_exam_text_view"
+        android:background="@drawable/circular_button_background"
+        android:src="@drawable/app_search_icon"
+        android:contentDescription="Search"
+        android:onClick="onSearchButtonClick"
+    />
+
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/calendarButton"
+        android:background="#000000"
+        />
+
+    <TextView
+        android:id="@+id/all_exams_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerLine"
+        android:text="All Exams"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/listContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/all_exams_text_view"
+        android:padding="16dp">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@android:color/white"
+            />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

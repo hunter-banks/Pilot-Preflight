@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Calendar
 
-class MainActivity : AppCompatActivity() {
+class PreviousEvaluations : AppCompatActivity() {
 
     private lateinit var dateEditText: EditText
     private lateinit var calendarButton: ImageButton
@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         dateEditText = findViewById(R.id.dateEditText)
         calendarButton = findViewById(R.id.calendarButton)
 
-        // Set the current date in the EditText by default
         val currentDate = getCurrentDate()
         dateEditText.setText(currentDate)
     }
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val datePickerDialog = DatePickerDialog(
             this,
             { _, year, month, day ->
-                val selectedDate = "$day/${month + 1}/$year"
+                val selectedDate = "${month + 1}/$day/$year"
                 dateEditText.setText(selectedDate)
             },
             currentYear,
@@ -47,6 +46,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun getCurrentDate(): String {
         val calendar = Calendar.getInstance()
-        return "${calendar.get(Calendar.DAY_OF_MONTH)}/${calendar.get(Calendar.MONTH) + 1}/${calendar.get(Calendar.YEAR)}"
+        return "${calendar.get(Calendar.MONTH)}/${calendar.get(Calendar.DAY_OF_MONTH) + 1}/${calendar.get(Calendar.YEAR)}"
     }
 }
