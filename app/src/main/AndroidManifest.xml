@@ -13,10 +13,40 @@
         android:theme="@style/Theme.Pilot_preflight"
         tools:targetApi="31">
         <activity
-            android:name=".ImsafeActivity"
-            android:label="IMSAFE Evaluation"
+            android:name=".EmotionActivity"
+            android:label="Emotion"
             android:parentActivityName=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".FatigueActivity"
+            android:label="Fatigue"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlcoholActivity"
+            android:exported="false"
+            android:label="Alcohol"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StressActivity"
+            android:exported="false"
+            android:label="Stress"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MedicationActivity"
+            android:exported="false"
+            android:label="Medication"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".IllnessActivity"
+            android:exported="false"
+            android:label="Illness"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ImsafeActivity"
+            android:exported="false"
+            android:label="IMSAFE Evaluation"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

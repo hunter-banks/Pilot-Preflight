@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ImsafeActivity">
+    tools:context=".AlcoholActivity">
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/imsafe_toolbar"
+        android:id="@+id/alcohol_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -14,34 +15,49 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <TextView
-        android:id="@+id/imsafe_header_view"
+        android:id="@+id/alcohol_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imsafe_toolbar"
-        android:text="@string/purpose_of_imsafe_evaluation"
+        android:layout_below="@id/alcohol_toolbar"
+        android:text="@string/alcohol"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         />
-    <TextView
-        android:id="@+id/imsafe_purpose_textview"
-        android:padding="20dp"
+    <GridLayout
+        android:id="@+id/alcohol_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imsafe_header_view"
-        android:textSize="15sp"
-        android:text="@string/the_imsafe_checklist_is_a_personal_health_assessment_used_to_ensure_the_pilot_is_healthy_before_each_flight_the_letters_stand_for_illness_medication_stress_alcohol_fatigue_emotions_by_reviewing_these_elements_of_the_checklist_the_pilot_can_conclude_whether_he_she_is_personally_fit_to_fly"
-        />
+        android:columnCount="1"
+        android:layout_below="@id/alcohol_header_text"
+        android:paddingHorizontal="10dp"
+        >
+        <CheckBox
+            android:id="@+id/alcohol_consume_checkbox"
+            android:text="@string/no_alcohol_consumed_within_the_last_8_hours"
+            />
+        <CheckBox
+            android:id="@+id/alcohol_bac"
+            android:text="@string/blood_alcohol_level_within_legal_limits"
+            />
+        <CheckBox
+            android:id="@+id/alcohol_hydrate"
+            android:text="@string/considered_the_effects_of_alcohol_on_hydration"
+            />
+        <CheckBox
+            android:id="@+id/alcohol_hangover"
+            android:text="@string/no_hangover_or_residual_alcohol_effects"
+            />
+    </GridLayout>
     <Button
-        android:id="@+id/imsafe_continue_illness_button"
+        android:id="@+id/imsafe_continue_fatigue_button"
         android:padding="10px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imsafe_purpose_textview"
+        android:layout_below="@id/alcohol_grid"
         android:layout_centerHorizontal="true"
         style="@style/landing_button"
-        android:text="@string/continue_to_illness_section"
+        android:text="@string/continue_to_fatigue_section"
         />
-
 
 </RelativeLayout>

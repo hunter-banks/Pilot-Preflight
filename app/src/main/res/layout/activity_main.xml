@@ -39,28 +39,28 @@
         android:paddingTop="20dp"
         >
         <TextView
-            android:text="Select an Option Below:"
+            android:text="@string/select_an_option_below"
             />
 
         <Button
             android:id="@+id/start_checklist_button"
-            android:text="Perform IMSAFE Checklist"
+            android:text="@string/perform_imsafe_evaluation"
             style="@style/landing_button"/>
 
         <Button
             android:id="@+id/review_regs_button"
             style="@style/landing_button"
-            android:text="Review FAA Rules &amp; Regulations" />
+            android:text="@string/review_faa_rules_amp_regulations" />
 
         <Button
             android:id="@+id/past_results_button"
             style="@style/landing_button"
-            android:text="Past Results" />
+            android:text="@string/past_results" />
 
         <Button
             android:id="@+id/ame_resources_button"
             style="@style/landing_button"
-            android:text="Aviation Medical Resources" />
+            android:text="@string/aviation_medical_resources" />
 
 
     </GridLayout>

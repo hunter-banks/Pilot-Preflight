@@ -3,31 +3,27 @@ package com.appdev.pilot_preflight
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 
-class ImsafeActivity : AppCompatActivity() {
-    var TAG = "ImsafeActivity"
-
-    private lateinit var illnessButton: Button
+class EmotionActivity : AppCompatActivity() {
+    private lateinit var continueHome: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_imsafe)
-        setSupportActionBar(findViewById(R.id.imsafe_toolbar))
-        illnessButton = findViewById(R.id.imsafe_continue_illness_button)
-        illnessButton.setOnClickListener(this::continueIllness)
+        setContentView(R.layout.activity_emotion)
+        setSupportActionBar(findViewById(R.id.emotion_toolbar))
+        continueHome = findViewById(R.id.imsafe_continue_home_button)
+        continueHome.setOnClickListener(this::continueHomeFun)
     }
-    private fun continueIllness(view: View) {
-        intent = Intent(this, IllnessActivity::class.java)
-        startActivity(intent)
+    private fun continueHomeFun(view: View) {
+//        intent = Intent(this, MedicationActivity::class.java)
+//        startActivity(intent)
         finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        Log.d(TAG, "inflate")
         menuInflater.inflate(R.menu.imsafe_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
