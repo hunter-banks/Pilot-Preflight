@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/sage"
+    >
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:layout_editor_absoluteX="43dp">-->
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="370dp"
+            android:layout_height="110dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="100dp"
+            android:background="#2F3C7E"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Federal Aviation Regulations"
+            android:textSize="30sp"
+            />
+
+    <!--        <ImageView-->
+        <!--        &lt;!&ndash;                android:id="@+id/regulations_text"&ndash;&gt;-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:src="@drawable/regulations_text" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="481dp"
+        android:layout_above="@+id/linkTextView"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="-31dp"
+        android:layout_marginBottom="84dp">
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sage"
+            android:padding="16dp"
+            android:text="@string/regulations_text" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/linkTextView"
+        style="@style/DisplayStyle"
+        android:layout_width="215dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="16dp"
+        android:onClick="openRegulations"
+        android:text="Regulations Site" />
+
+<!--    </RelativeLayout>-->
+
+</RelativeLayout>
+
+
