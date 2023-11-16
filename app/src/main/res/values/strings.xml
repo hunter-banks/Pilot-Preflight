@@ -2,22 +2,18 @@
     <string name="app_name">Pilot Preflight IMSAFE Checklist</string>
 <!--    <string name="regulations_text">    The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.-->
 
-    <string name="regulations_text">
-    <![CDATA[
-    The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.
+    <string name="regulations_text"> The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.
 
     There are myriad physiological and psychological factors that could impair a pilot’s ability and render a flight unsafe. The IMSAFE checklist ensures pilots meet the standards in Title 14 Code of Federal Regulations (14 CFR) part 67 before any flight.
 
-    <b>IMSAFE stands for:</b>
-    <ol>
-        <li><b>Illness:</b> Do you have current or recent illnesses that could affect flight?</li>
-        <li><b>Medication:</b> Have you been taking any meds that could impair your ability to fly?</li>
-        <li><b>Stress:</b> Are you experiencing unusual psychological pressure and/or anxiety?</li>
-        <li><b>Alcohol:</b> Have you had any alcohol in the last eight hours? Are you hungover?</li>
-        <li><b>Fatigue:</b> Are you tired and/or not adequately rested?</li>
-        <li><b>Emotion:</b> Are you emotionally upset about anything?</li>
-    </ol>
-    ]]>
+    IMSAFE stands for:
+    Illness:Do you have current or recent illnesses that could affect flight?
+        Medication: Have you been taking any meds that could impair your ability to fly?
+        Stress: Are you experiencing unusual psychological pressure and/or anxiety?
+        Alcohol: Have you had any alcohol in the last eight hours? Are you hungover?
+        Fatigue: Are you tired and/or not adequately rested?
+        Emotion: Are you emotionally upset about anything?
+
 </string>
 
 
