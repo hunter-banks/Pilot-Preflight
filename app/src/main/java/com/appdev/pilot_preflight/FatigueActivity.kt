@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.Toast
 
 class FatigueActivity : AppCompatActivity() {
     private lateinit var continueEmotion: Button
@@ -53,6 +54,7 @@ class FatigueActivity : AppCompatActivity() {
 
         val allCheckboxesSelected =
             symptomCheckbox.isChecked && dutyLimitsCheckbox.isChecked && mentalCheckbox.isChecked && workHoursCheckbox.isChecked && managementCheckbox.isChecked
+
         editor.putBoolean("fatigueAllChecked", allCheckboxesSelected)
         editor.apply()
         intent = Intent(this, EmotionActivity::class.java) // Change to the next activity

@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.Toast
 
 class MedicationActivity : AppCompatActivity() {
     private lateinit var continueStress: Button
@@ -49,6 +50,8 @@ class MedicationActivity : AppCompatActivity() {
 
         val allCheckboxesSelected =
             verifyCheckbox.isChecked && impairCheckbox.isChecked && violateCheckbox.isChecked && informAMECheckbox.isChecked
+
+
         editor.putBoolean("medicationAllChecked", allCheckboxesSelected)
         editor.apply()
         intent = Intent(this, StressActivity::class.java) // Change to the next activity

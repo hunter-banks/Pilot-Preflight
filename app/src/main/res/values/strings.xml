@@ -64,6 +64,8 @@
         Emotion: Are you emotionally upset about anything?
 
 </string>
+    <string name="complete_evaluation">Complete Evaluation</string>
+    <string name="return_home">Return Home</string>
 
 
 </resources>

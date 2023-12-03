@@ -45,10 +45,21 @@
             />
     </GridLayout>
     <Button
+        android:id="@+id/complete_evaluation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/emotion_grid"
+        android:layout_centerHorizontal="true"
+        style="@style/landing_button"
+        android:text="@string/complete_evaluation"
+        />
+    <Button
         android:id="@+id/imsafe_continue_home_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/emotion_grid"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/complete_evaluation_button"
         android:layout_centerHorizontal="true"
         style="@style/landing_button"
         android:text="@string/home"
