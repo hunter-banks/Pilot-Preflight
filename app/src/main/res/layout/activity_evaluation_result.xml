@@ -22,14 +22,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/evaluation_results_title_text_view"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
     <Button
         android:id="@+id/return_home_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/detailed_results_text_area"
-        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         style="@style/landing_button"
         android:text="@string/return_home"

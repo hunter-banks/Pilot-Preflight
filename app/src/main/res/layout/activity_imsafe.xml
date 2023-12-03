@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imsafe_header_view"
-        android:textSize="15sp"
+        android:textSize="25sp"
         android:text="@string/the_imsafe_checklist_is_a_personal_health_assessment_used_to_ensure_the_pilot_is_healthy_before_each_flight_the_letters_stand_for_illness_medication_stress_alcohol_fatigue_emotions_by_reviewing_these_elements_of_the_checklist_the_pilot_can_conclude_whether_he_she_is_personally_fit_to_fly"
         />
     <Button

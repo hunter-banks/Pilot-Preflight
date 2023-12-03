@@ -26,7 +26,6 @@ class EmotionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emotion)
 
-        continueHome = findViewById(R.id.imsafe_continue_home_button)
         completeEvaluationButton = findViewById(R.id.complete_evaluation_button)
 
         symptomCheckbox = findViewById(R.id.emotion_symptom_checkbox)
@@ -43,7 +42,6 @@ class EmotionActivity : AppCompatActivity() {
         outlookCheckbox.isChecked = prefs.getBoolean("emotion_outlook", false)
         normalCheckbox.isChecked = prefs.getBoolean("emotion_normal", false)
 
-        continueHome.setOnClickListener(this::continueHome)
         completeEvaluationButton.setOnClickListener(this::completeEvaluation)
     }
 
@@ -62,11 +60,6 @@ class EmotionActivity : AppCompatActivity() {
         editor.putBoolean("emotionAllChecked", allCheckboxesSelected)
         editor.apply()
         intent = Intent(this, EvaluationResultsActivity::class.java) // Change to the next activity
-        startActivity(intent)
-    }
-
-    private fun continueHome(view: View) {
-        intent = Intent(this, MainActivity::class.java) // Change to the next activity
         startActivity(intent)
     }
 

@@ -44,35 +44,36 @@ class EvaluationResultsActivity : AppCompatActivity() {
 
     private fun setEvaluationResultText(resultsArray : BooleanArray)
     {
-//        val toastMessage = "Results Array: ${resultsArray.joinToString(", ")}"
-//        Toast.makeText(this, toastMessage, Toast.LENGTH_LONG).show()
 
         var safeToFly = true
         for (result in resultsArray)
         {
-            //Toast.makeText(this, "Result: $result", Toast.LENGTH_SHORT).show()
             if (result == false)
             {
-//                Toast.makeText(this, "FALSE DETECTED", Toast.LENGTH_SHORT).show()
                 safeToFly = false
             }
         }
 
-        var displayedText = "Hello pilot, \n"
-
-        Toast.makeText(this, "Safe to Fly: $safeToFly", Toast.LENGTH_SHORT).show()
+        var displayedText = "Hello pilot, \n\n"
 
 
-        if (!safeToFly)
+
+        if (safeToFly)
         {
-            displayedText += "After reviewing your evaluation we have determined that you are currently unfit to fly. " +
-                    "At this time we recommend that you review the Federal Aviation Administration's Guidelines and postpone your flight."
+            displayedText += "After reviewing your evaluation, we have determined that you are ready to fly per the IMSAFE guidelines. " +
+                    "Please proceed with additional checks as needed and have a safe flight.\n\n"
         }
         else
         {
-            displayedText += "After reviewing your evaluation we have determined that you are ready to fly per the FAA IMSAFE guidelines. " +
-                    "Please proceed with additional checks as needed and have a safe flight."
+            displayedText += "After reviewing your evaluation, we have determined that you are currently unfit to fly. " +
+                    "At this time we recommend that you review the Federal Aviation Administration's Guidelines and postpone your flight.\n\n"
         }
+        displayedText += "Illness.............." + if (resultsArray[0]) "✅\n\n" else "❌\n\n"
+        displayedText += "Medication......" + if (resultsArray[1]) "✅\n\n" else "❌\n\n"
+        displayedText += "Stress.............." + if (resultsArray[2]) "✅\n\n" else "❌\n\n"
+        displayedText += "Alcohol............" + if (resultsArray[3]) "✅\n\n" else "❌\n\n"
+        displayedText += "Fatigue............" + if (resultsArray[4]) "✅\n\n" else "❌\n\n"
+        displayedText += "Emotion..........." + if (resultsArray[5]) "✅\n\n" else "❌\n\n"
 
         results_text_view.setText(displayedText)
 
@@ -94,7 +95,8 @@ class EvaluationResultsActivity : AppCompatActivity() {
         // Determine which menu option was selected
         return when (item.itemId) {
             R.id.home -> {
-                // Add selected
+                intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
                 true
             }
