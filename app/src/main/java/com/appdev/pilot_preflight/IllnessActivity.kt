@@ -29,10 +29,8 @@ class IllnessActivity : AppCompatActivity() {
         recentProcCheckbox = findViewById(R.id.illness_recent_proc)
         allergiesCheckbox = findViewById(R.id.illness_allergies)
 
-        // Use the custom named shared preferences file
         val prefs = getSharedPreferences(prefsFileName, Context.MODE_PRIVATE)
 
-        // Use default values of 'false' for the first time
         symptomCheckbox.isChecked = prefs.getBoolean("symptomCheckbox", false)
         impairCheckbox.isChecked = prefs.getBoolean("impairCheckbox", false)
         recentProcCheckbox.isChecked = prefs.getBoolean("recentProcCheckbox", false)
@@ -42,17 +40,17 @@ class IllnessActivity : AppCompatActivity() {
     }
 
     private fun continueMedication(view: View) {
-        // Use the custom named shared preferences file
         val prefs = getSharedPreferences(prefsFileName, Context.MODE_PRIVATE)
         val editor = prefs.edit()
         editor.putBoolean("symptomCheckbox", symptomCheckbox.isChecked)
         editor.putBoolean("impairCheckbox", impairCheckbox.isChecked)
         editor.putBoolean("recentProcCheckbox", recentProcCheckbox.isChecked)
         editor.putBoolean("allergiesCheckbox", allergiesCheckbox.isChecked)
-        editor.apply()
 
         val allCheckboxesSelected =
             symptomCheckbox.isChecked && impairCheckbox.isChecked && recentProcCheckbox.isChecked && allergiesCheckbox.isChecked
+        editor.putBoolean("illnessAllChecked", allCheckboxesSelected)
+        editor.apply()
         intent = Intent(this, MedicationActivity::class.java)
         startActivity(intent)
     }
