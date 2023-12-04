@@ -57,20 +57,7 @@
         android:contentDescription="Select a date."
         />
 
-    <ImageButton
-        android:id="@+id/searchButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/calendarButton"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="70dp"
-        android:layout_below="@id/previous_exam_text_view"
-        android:background="@drawable/circular_button_background"
-        android:src="@drawable/app_search_icon"
-        android:contentDescription="Search"
 
-    />
 
     <View
         android:id="@+id/dividerLine"
@@ -110,13 +97,5 @@
             android:clipToPadding="false"
             android:scrollbars="vertical"
             />
-
-
-
-
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
