@@ -11,6 +11,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class EvaluationResultsActivity : AppCompatActivity() {
     var TAG = "ImsafeActivity"
@@ -39,7 +42,33 @@ class EvaluationResultsActivity : AppCompatActivity() {
         resultsArray[4] = prefs.getBoolean("fatigueAllChecked", false)
         resultsArray[5] = prefs.getBoolean("emotionAllChecked", false)
         setEvaluationResultText(resultsArray)
+
+        saveEvaluationToFile(resultsArray)
+
+
     }
+
+    private fun saveEvaluationToFile(resultsArray: BooleanArray) {
+        val timestamp = getCurrentTimestamp()
+        val evaluationText = "$timestamp,${resultsArray.joinToString(separator = ",")}"
+
+        try {
+            // Open the file in append mode
+            val fileOutputStream = openFileOutput("EvaluationReseults.txt", Context.MODE_APPEND)
+            fileOutputStream.write(evaluationText.toByteArray())
+            fileOutputStream.write("\n".toByteArray()) // Add a newline for each evaluation
+            fileOutputStream.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun getCurrentTimestamp(): String {
+        val dateFormat = SimpleDateFormat("MM-dd-yyyy hh:mm a", Locale.getDefault())
+        val date = Date(System.currentTimeMillis())
+        return dateFormat.format(date)
+    }
+
 
 
     private fun setEvaluationResultText(resultsArray : BooleanArray)
