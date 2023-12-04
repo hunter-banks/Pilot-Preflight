@@ -41,20 +41,40 @@ class EvaluationResultsActivity : AppCompatActivity() {
         resultsArray[3] = prefs.getBoolean("alcoholAllChecked", false)
         resultsArray[4] = prefs.getBoolean("fatigueAllChecked", false)
         resultsArray[5] = prefs.getBoolean("emotionAllChecked", false)
-        setEvaluationResultText(resultsArray)
-
-        saveEvaluationToFile(resultsArray)
-
+        var safe = setEvaluationResultText(resultsArray)
+        saveEvaluationToFile(resultsArray, safe)
+        //clearFileContents("EvaluationResults.txt", applicationContext)
 
     }
 
-    private fun saveEvaluationToFile(resultsArray: BooleanArray) {
+    fun clearFileContents(fileName: String, context: Context) {
+        try {
+            // Open the file in write mode with MODE_PRIVATE, which truncates the file
+            val fileOutputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE)
+
+            // Close the stream to save the changes
+            fileOutputStream.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+
+    private fun saveEvaluationToFile(resultsArray: BooleanArray, safeToFly : Boolean) {
         val timestamp = getCurrentTimestamp()
-        val evaluationText = "$timestamp,${resultsArray.joinToString(separator = ",")}"
+        var evaluationText : String
+        if (safeToFly)
+        {
+            evaluationText = "$timestamp                      ✅"
+        }
+        else
+        {
+            evaluationText = "$timestamp                      ❌"
+        }
 
         try {
             // Open the file in append mode
-            val fileOutputStream = openFileOutput("EvaluationReseults.txt", Context.MODE_APPEND)
+            val fileOutputStream = openFileOutput("EvaluationResults.txt", Context.MODE_APPEND)
             fileOutputStream.write(evaluationText.toByteArray())
             fileOutputStream.write("\n".toByteArray()) // Add a newline for each evaluation
             fileOutputStream.close()
@@ -64,16 +84,15 @@ class EvaluationResultsActivity : AppCompatActivity() {
     }
 
     private fun getCurrentTimestamp(): String {
-        val dateFormat = SimpleDateFormat("MM-dd-yyyy hh:mm a", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.getDefault())
         val date = Date(System.currentTimeMillis())
         return dateFormat.format(date)
     }
 
 
 
-    private fun setEvaluationResultText(resultsArray : BooleanArray)
+    private fun setEvaluationResultText(resultsArray : BooleanArray): Boolean
     {
-
         var safeToFly = true
         for (result in resultsArray)
         {
@@ -105,6 +124,8 @@ class EvaluationResultsActivity : AppCompatActivity() {
         displayedText += "Emotion..........." + if (resultsArray[5]) "✅\n\n" else "❌\n\n"
 
         results_text_view.setText(displayedText)
+
+        return safeToFly
 
     }
 

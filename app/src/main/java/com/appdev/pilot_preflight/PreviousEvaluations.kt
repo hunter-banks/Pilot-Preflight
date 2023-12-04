@@ -86,7 +86,7 @@ class PreviousEvaluations : AppCompatActivity() {
         val resultList = ArrayList<String>()
 
         try {
-            val fileInputStream = openFileInput("EvaluationReseults.txt")
+            val fileInputStream = openFileInput("EvaluationResults.txt")
             val inputStreamReader = InputStreamReader(fileInputStream)
             val bufferedReader = BufferedReader(inputStreamReader)
             var line: String?
