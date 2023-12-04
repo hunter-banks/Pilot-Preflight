@@ -94,8 +94,6 @@
 
         />
 
-
-
     <LinearLayout
         android:id="@+id/listContainer"
         android:layout_width="match_parent"
@@ -104,8 +102,6 @@
         android:layout_below="@id/all_exams_text_view"
         android:padding="16dp">
 
-
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
@@ -113,8 +109,8 @@
             android:padding="5dp"
             android:clipToPadding="false"
             android:scrollbars="vertical"
-
             />
+
 
 
 
