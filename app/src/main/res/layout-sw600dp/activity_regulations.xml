@@ -9,15 +9,15 @@
 
     <TextView
         android:id="@+id/titleTextView"
+        style="@style/landing_button"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="100dp"
         android:background="#2F3C7E"
         android:gravity="center"
         android:padding="8dp"
-        style="@style/landing_button"
         android:text="Federal Aviation Regulations"
         android:textSize="30sp" />
 
@@ -26,16 +26,16 @@
         android:id="@+id/infoTextView"
         style="@style/landing_button"
         android:layout_width="match_parent"
-        android:layout_height="477dp"
+        android:layout_height="match_parent"
         android:layout_above="@+id/linkTextView"
         android:layout_below="@id/titleTextView"
-        android:layout_marginTop="-108dp"
+        android:layout_marginTop="-77dp"
         android:layout_marginBottom="-61dp"
         android:background="#3700BCD4"
         android:ellipsize="end"
         android:maxLines="20"
         android:padding="16dp"
-        android:text="@string/regulations_text"
+        android:text="@string/regulations_text2"
         android:textSize="20sp" />
 
     <Button

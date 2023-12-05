@@ -64,6 +64,19 @@
         \n Emotion:\n Are you emotionally upset?
 
 </string>
+    <string name="regulations_text2">
+        The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.\n
+        There are myriad physiological and psychological factors that could impair a pilot’s ability and render a flight unsafe. The IMSAFE checklist ensures pilots meet the standards in Title 14 Code of Federal Regulations (14 CFR) part 67 before any flight. \n
+
+    IMSAFE stands for:\n
+        Illness: Do you have current or recent illnesses that could affect flight?
+        \n Medication: Have you been taking any meds that could impair your ability to fly?
+        \n Stress: Are you experiencing unusual psychological pressure and/or anxiety?
+        \n Alcohol: Have you had any alcohol in the last eight hours? Are you hungover?
+        \n Fatigue: Are you tired and/or not adequately rested?
+        \n Emotion: Are you emotionally upset?
+
+</string>
     <string name="complete_evaluation">Complete Evaluation</string>
     <string name="return_home">Return Home</string>
     <string name="welcome_pilot">Welcome, Pilot!</string>

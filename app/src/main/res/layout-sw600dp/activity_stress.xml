@@ -1,75 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StressActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/stress_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:text="@string/stress"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         android:textSize="30sp"
         />
 
-    <GridLayout
-        android:id="@+id/stress_grid"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="1"
-        android:layout_below="@id/stress_header_text"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
 
-        <CheckBox
-            android:id="@+id/stress_symptom_checkbox"
-            android:text="@string/physically_and_mentally_fit_for_flight"
-            android:textSize="18sp"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/stress_impair_checkbox"
-            android:text="@string/no_excessive_stress_or_emotional_strain"
-            android:textSize="18sp"
-            />
+            <CheckBox
+                android:id="@+id/stress_symptom_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/physically_and_mentally_fit_for_flight"
+                android:textSize="18sp"
+                />
 
-        <CheckBox
-            android:id="@+id/stress_recent_event_checkbox"
-            android:text="@string/no_recent_traumatic_events_affecting_mental_state"
-            android:textSize="18sp"
-            />
+            <CheckBox
+                android:id="@+id/stress_impair_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_excessive_stress_or_emotional_strain"
+                android:textSize="18sp"
+                />
 
-        <CheckBox
-            android:id="@+id/stress_coping_checkbox"
-            android:text="@string/adequate_coping_mechanisms_for_stress"
-            android:textSize="18sp"
-            />
+            <CheckBox
+                android:id="@+id/stress_recent_event_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_recent_traumatic_events_affecting_mental_state"
+                android:textSize="18sp"
+                />
 
-        <CheckBox
-            android:id="@+id/stress_unresolved_checkbox"
-            android:text="@string/no_unresolved_personal_or_professional_issues"
-            android:textSize="18sp"
-            />
-    </GridLayout>
+            <CheckBox
+                android:id="@+id/stress_coping_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adequate_coping_mechanisms_for_stress"
+                android:textSize="18sp"
+                />
+
+            <CheckBox
+                android:id="@+id/stress_unresolved_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_unresolved_personal_or_professional_issues"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/imsafe_continue_alc_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/stress_grid"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:text="@string/continue_to_alcohol_section"
         android:textSize="18sp"
         android:padding="16dp"
         style="@style/landing_button"
         />
 
-</RelativeLayout>
+</LinearLayout>

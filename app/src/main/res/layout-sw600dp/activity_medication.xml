@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MedicationActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/medication_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:text="@string/medication"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
@@ -18,47 +15,52 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/medication_header_text"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="10dp">
 
-        <GridLayout
-            android:id="@+id/medication_grid"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="1"
-            android:paddingHorizontal="10dp"
-            >
+            android:orientation="vertical">
 
             <CheckBox
                 android:id="@+id/medication_verify_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/checked_and_verified_all_medications_for_aviation_compatibility"
                 />
 
             <CheckBox
                 android:id="@+id/medication_impair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/no_use_of_over_the_counter_medications_that_may_impair_performance"
                 />
 
             <CheckBox
                 android:id="@+id/medication_violate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/verified_that_medications_do_not_violate_aviation_regulations"
                 />
 
             <CheckBox
                 android:id="@+id/medication_inform_ame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/informed_aviation_medical_examiner_about_medications"
                 />
-        </GridLayout>
+        </LinearLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/imsafe_continue_stress_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/medication_grid"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         style="@style/landing_button"
         android:text="@string/continue_to_stress_section"
         />
-</RelativeLayout>
+
+</LinearLayout>

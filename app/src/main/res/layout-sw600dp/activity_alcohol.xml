@@ -1,74 +1,77 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlcoholActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/alcohol_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:text="@string/alcohol"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/alcohol_consume_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_alcohol_consumed_within_the_last_8_hours"
+                android:padding="8dp"
+                android:textSize="18sp"
+                />
+
+            <CheckBox
+                android:id="@+id/alcohol_bac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blood_alcohol_level_within_legal_limits"
+                android:padding="8dp"
+                android:textSize="18sp"
+                />
+
+            <CheckBox
+                android:id="@+id/alcohol_hydrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/considered_the_effects_of_alcohol_on_hydration"
+                android:padding="8dp"
+                android:textSize="18sp"
+                />
+
+            <CheckBox
+                android:id="@+id/alcohol_hangover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_hangover_or_residual_alcohol_effects"
+                android:padding="8dp"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/imsafe_continue_fatigue_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/alcohol_header_text"
-        android:orientation="vertical"
-        android:paddingHorizontal="10dp">
+        android:layout_gravity="center_horizontal"
+        style="@style/landing_button"
+        android:text="@string/continue_to_fatigue_section"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        />
 
-        <CheckBox
-            android:id="@+id/alcohol_consume_checkbox"
-            android:text="@string/no_alcohol_consumed_within_the_last_8_hours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="18sp"
-            />
-
-        <CheckBox
-            android:id="@+id/alcohol_bac"
-            android:text="@string/blood_alcohol_level_within_legal_limits"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="18sp"
-            />
-
-        <CheckBox
-            android:id="@+id/alcohol_hydrate"
-            android:text="@string/considered_the_effects_of_alcohol_on_hydration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="18sp"
-            />
-
-        <CheckBox
-            android:id="@+id/alcohol_hangover"
-            android:text="@string/no_hangover_or_residual_alcohol_effects"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="18sp"
-            />
-
-        <Button
-            android:id="@+id/imsafe_continue_fatigue_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            style="@style/landing_button"
-            android:text="@string/continue_to_fatigue_section"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"
-            />
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
