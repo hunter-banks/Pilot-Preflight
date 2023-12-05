@@ -39,4 +39,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    private fun isTablet(): Boolean {
+        return resources.getBoolean(R.bool.isTablet) // Define this boolean in your values-sw600dp
+    }
+
 }

@@ -1,0 +1,44 @@
+<!-- res/layout-sw600dp/activity_evaluation.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImsafeActivity">
+
+    <TextView
+        android:id="@+id/evaluation_results_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Evaluation Results"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Headline"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/evaluation_results_title_text_view"
+        android:layout_above="@id/return_home_button"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/detailed_results_text_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/return_home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/landing_button"
+        android:text="@string/return_home"
+        />
+</RelativeLayout>

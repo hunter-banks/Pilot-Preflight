@@ -1,0 +1,67 @@
+<!-- res/layout-sw600dp/activity_emotion.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmotionActivity">
+
+    <TextView
+        android:id="@+id/emotion_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emotion"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Headline"
+        />
+
+    <LinearLayout
+        android:id="@+id/emotion_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emotion_header_text"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp">
+
+        <CheckBox
+            android:id="@+id/emotion_symptom_checkbox"
+            android:text="@string/hydrated_and_well_nourished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/emotion_past_meal"
+            android:text="@string/consumed_a_balanced_meal_within_the_last_4_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/emotion_future_meal"
+            android:text="@string/considered_the_timing_of_meals_to_avoid_fatigue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/emotion_outlook"
+            android:text="@string/positive_emotional_outlook_toward_the_flight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/emotion_normal"
+            android:text="@string/no_unresolved_conflicts_impacting_emotional_well_being"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/complete_evaluation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/complete_evaluation"
+            style="@style/landing_button"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>
