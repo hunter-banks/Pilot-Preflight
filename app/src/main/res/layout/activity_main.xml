@@ -14,8 +14,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:paddingTop="30dp"
-        android:text="Welcome, Pilot!"
-        android:textSize="40dp"
+        android:text="@string/welcome_pilot"
+        android:textSize="40sp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/description_text"

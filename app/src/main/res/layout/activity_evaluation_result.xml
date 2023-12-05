@@ -7,31 +7,31 @@
     tools:context=".ImsafeActivity">
 
     <TextView
-        android:id="@+id/imsafe_header_view"
+        android:id="@+id/evaluation_results_title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="@string/purpose_of_imsafe_evaluation"
+        android:text="Evaluation Results"
+        android:layout_marginTop="25dp"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         />
     <TextView
-        android:id="@+id/imsafe_purpose_textview"
+        android:id="@+id/detailed_results_text_area"
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imsafe_header_view"
-        android:textSize="25sp"
-        android:text="@string/the_imsafe_checklist_is_a_personal_health_assessment_used_to_ensure_the_pilot_is_healthy_before_each_flight_the_letters_stand_for_illness_medication_stress_alcohol_fatigue_emotions_by_reviewing_these_elements_of_the_checklist_the_pilot_can_conclude_whether_he_she_is_personally_fit_to_fly"
+        android:layout_below="@id/evaluation_results_title_text_view"
+        android:textSize="18sp"
         />
     <Button
-        android:id="@+id/imsafe_continue_illness_button"
+        android:id="@+id/return_home_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imsafe_purpose_textview"
+        android:layout_below="@id/detailed_results_text_area"
         android:layout_centerHorizontal="true"
         style="@style/landing_button"
-        android:text="@string/continue_to_illness_section"
+        android:text="@string/return_home"
         />
 
 

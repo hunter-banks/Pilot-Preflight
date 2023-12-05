@@ -64,6 +64,9 @@
         Emotion:\n Are you emotionally upset about anything?
 
 </string>
+    <string name="complete_evaluation">Complete Evaluation</string>
+    <string name="return_home">Return Home</string>
+    <string name="welcome_pilot">Welcome, Pilot!</string>
 
 
 </resources>

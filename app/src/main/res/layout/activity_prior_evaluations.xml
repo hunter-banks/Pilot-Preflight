@@ -8,13 +8,23 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/test_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <TextView
         android:id="@+id/previous_exam_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Previous Exam Date"
         android:textSize="25sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_below="@id/test_text_view"
 
     />
 
@@ -47,20 +57,7 @@
         android:contentDescription="Select a date."
         />
 
-    <ImageButton
-        android:id="@+id/searchButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/calendarButton"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="70dp"
-        android:layout_below="@id/previous_exam_text_view"
-        android:background="@drawable/circular_button_background"
-        android:src="@drawable/app_search_icon"
-        android:contentDescription="Search"
 
-    />
 
     <View
         android:id="@+id/dividerLine"
@@ -92,18 +89,13 @@
         android:layout_below="@id/all_exams_text_view"
         android:padding="16dp">
 
-
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:background="@android:color/white"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
             />
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
