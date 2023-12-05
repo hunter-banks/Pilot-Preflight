@@ -51,17 +51,17 @@
     <string name="app_name">Pilot Preflight IMSAFE Checklist</string>
 <!--    <string name="regulations_text">    The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.-->
 
-    <string name="regulations_text"> The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.\n
-
-    There are myriad physiological and psychological factors that could impair a pilot’s ability and render a flight unsafe. The IMSAFE checklist ensures pilots meet the standards in Title 14 Code of Federal Regulations (14 CFR) part 67 before any flight. \n
+    <string name="regulations_text">
+        The IMSAFE checklist helps pilots and co-pilots determine if they are fit to fly. It is critically important that every pilot conduct a personal pre-flight health assessment before piloting any aircraft.\n
+        There are myriad physiological and psychological factors that could impair a pilot’s ability and render a flight unsafe. The IMSAFE checklist ensures pilots meet the standards in Title 14 Code of Federal Regulations (14 CFR) part 67 before any flight. \n
 
     IMSAFE stands for:\n
         Illness:\n Do you have current or recent illnesses that could affect flight?
-        Medication:\n Have you been taking any meds that could impair your ability to fly?
-        Stress:\n Are you experiencing unusual psychological pressure and/or anxiety?
-        Alcohol:\n Have you had any alcohol in the last eight hours? Are you hungover?
-        Fatigue:\n Are you tired and/or not adequately rested?
-        Emotion:\n Are you emotionally upset about anything?
+        \n Medication:\n Have you been taking any meds that could impair your ability to fly?
+        \n Stress:\n Are you experiencing unusual psychological pressure and/or anxiety?
+        \n Alcohol:\n Have you had any alcohol in the last eight hours? Are you hungover?
+        \n Fatigue:\n Are you tired and/or not adequately rested?
+        \n Emotion:\n Are you emotionally upset about anything?
 
 </string>
     <string name="complete_evaluation">Complete Evaluation</string>

@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="#3700BCD4"
-    >
-    <!-- edits -->
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="#2F3C7E"
+        android:gravity="center"
+        android:padding="8dp"
+        style="@style/landing_button"
+        android:text="Medical Resources"
+        android:textSize="30sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/sage">
-
-        <TextView
-            android:id="@+id/display"
-            android:layout_width="370dp"
-            android:layout_height="110dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="100dp"
-            android:background="#2F3C7E"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="Medical Resources"
-            android:textSize="30sp" />
+        android:layout_below="@id/welcome_text"
+        android:layout_centerHorizontal="true"
+        android:padding="50dp">
 
         <Button
+            android:id="@+id/general_info_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="100dp"
             android:text="General Information"
             android:onClick="openFAAWebsite"
-            style="@style/DisplayStyle"
-            />
+            style="@style/landing_button"/>
 
         <Button
+            android:id="@+id/pharmaceuticals_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:text="Pharmaceuticals"
             android:onClick="openPharm"
-            style="@style/DisplayStyle"/>
+            style="@style/landing_button"/>
 
         <Button
+            android:id="@+id/disease_medical_standards_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:text="Disease and Medical Standards"
             android:onClick="openDisease"
-            style="@style/DisplayStyle"/>
+            style="@style/landing_button"/>
 
         <Button
+            android:id="@+id/special_issuances_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Special Issuances"
             android:onClick="openSpecialIssuances"
-            style="@style/DisplayStyle"/>
+            style="@style/landing_button"/>
 
         <Button
-            style="@style/DisplayStyle"
+            android:id="@+id/far_home_page_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:text="FAR HOME PAGE"
             android:onClick="openHome"
-            android:text="FAR HOME PAGE" />
+            style="@style/landing_button"/>
 
     </LinearLayout>
+
 </RelativeLayout>
