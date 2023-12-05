@@ -34,6 +34,8 @@ class PreviousEvaluations : AppCompatActivity() {
         calendarButton = findViewById(R.id.calendarButton)
         recyclerView = findViewById(R.id.recyclerView)
 
+        calendarButton.setOnClickListener(this::showDatePicker)
+
         // Initialize the adapter with the full list
         evaluationsList = getEvaluationResults()
         adapter = MyAdapter(evaluationsList)
@@ -42,7 +44,7 @@ class PreviousEvaluations : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
 
-        dateEditText.setText(getCurrentDate())
+        //dateEditText.setText(getCurrentDate())
 
         dateEditText.setOnClickListener {
             dateEditText.text.clear()

@@ -21,7 +21,7 @@
         android:id="@+id/previous_exam_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Previous Exam Date"
+        android:text="@string/previous_exam_date"
         android:textSize="25sp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/test_text_view"
@@ -36,7 +36,7 @@
         android:layout_marginStart="55dp"
         android:layout_marginRight="100dp"
         android:layout_marginTop="20dp"
-        android:hint="Select Date -->"
+        android:hint="@string/select_date"
         android:focusable="false"
         />
 
@@ -53,8 +53,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:src="@android:drawable/ic_menu_my_calendar"
         android:scaleType="fitCenter"
-        android:onClick="showDatePicker"
-        android:contentDescription="Select a date."
+        android:contentDescription="@string/select_a_date"
         />
 
 

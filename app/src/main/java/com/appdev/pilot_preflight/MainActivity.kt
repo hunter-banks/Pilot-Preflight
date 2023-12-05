@@ -6,11 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
     val TAG = "MainActivity"
     private lateinit var checklistButton: Button
     private lateinit var pastResult: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         regulationsButton.setOnClickListener {
             startActivity(Intent(this, RegulationsActivity::class.java))
         }
+
 
         val medicalButton: Button = findViewById(R.id.medicalButton)
         medicalButton.setOnClickListener {

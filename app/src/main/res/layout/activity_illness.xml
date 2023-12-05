@@ -14,6 +14,8 @@
         android:text="@string/illness"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="50sp"
+        android:layout_marginBottom="15dp"
         />
     <GridLayout
         android:id="@+id/illness_grid"
@@ -26,18 +28,26 @@
         <CheckBox
             android:id="@+id/illness_symptom_checkbox"
             android:text="@string/no_symptoms_of_illness_fever_nausea_dizziness_etc"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/illness_impair"
             android:text="@string/no_recent_illness_that_may_impair_cognitive_or_physical_function"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/illness_recent_proc"
             android:text="@string/no_recent_surgery_or_medical_procedure"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/illness_allergies"
             android:text="@string/checked_for_allergies_that_may_impact_the_flight"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
     </GridLayout>
     <Button
@@ -48,6 +58,7 @@
         android:layout_centerHorizontal="true"
         style="@style/landing_button"
         android:text="@string/continue_to_medication_section"
+
         />
 
 </RelativeLayout>

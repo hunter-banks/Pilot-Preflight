@@ -13,6 +13,8 @@
         android:layout_centerHorizontal="true"
         android:text="@string/alcohol"
         android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_marginBottom="15dp"
         style="@style/TextAppearance.AppCompat.Headline"
         />
     <GridLayout
@@ -22,22 +24,31 @@
         android:columnCount="1"
         android:layout_below="@id/alcohol_header_text"
         android:paddingHorizontal="10dp"
+
         >
         <CheckBox
             android:id="@+id/alcohol_consume_checkbox"
             android:text="@string/no_alcohol_consumed_within_the_last_8_hours"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/alcohol_bac"
             android:text="@string/blood_alcohol_level_within_legal_limits"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/alcohol_hydrate"
             android:text="@string/considered_the_effects_of_alcohol_on_hydration"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/alcohol_hangover"
             android:text="@string/no_hangover_or_residual_alcohol_effects"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
     </GridLayout>
     <Button
