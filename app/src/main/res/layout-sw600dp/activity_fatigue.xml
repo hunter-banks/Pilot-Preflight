@@ -1,0 +1,74 @@
+<!-- res/layout-sw600dp/activity_fatigue.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fatigue_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Fatigue"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Headline"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/fatigue_symptom_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/well_rested_and_free_from_fatigue"
+                />
+
+            <CheckBox
+                android:id="@+id/fatigue_duty_limits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adhered_to_duty_rest_regulations"
+                />
+
+            <CheckBox
+                android:id="@+id/fatigue_mental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_signs_of_physical_or_mental_exhaustion"
+                />
+
+            <CheckBox
+                android:id="@+id/fatigue_work_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/avoided_consecutive_long_work_shifts"
+                />
+
+            <CheckBox
+                android:id="@+id/fatigue_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/utilized_fatigue_risk_management_strategies"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/imsafe_continue_emotion_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/landing_button"
+        android:text="@string/continue_to_emotion_section"
+        />
+
+</LinearLayout>
