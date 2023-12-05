@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#3700BCD4">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="#2F3C7E"
+        android:gravity="center"
+        android:padding="8dp"
+        style="@style/landing_button"
+        android:text="Federal Aviation Regulations"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/infoTextView"
+        style="@style/landing_button"
+        android:layout_width="match_parent"
+        android:layout_height="477dp"
+        android:layout_above="@+id/linkTextView"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="-108dp"
+        android:layout_marginBottom="-61dp"
+        android:background="#3700BCD4"
+        android:ellipsize="end"
+        android:maxLines="20"
+        android:padding="16dp"
+        android:text="@string/regulations_text"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/linkTextView"
+        style="@style/landing_button"
+        android:layout_width="215dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="16dp"
+        android:text="Regulations Site"
+        />
+
+</RelativeLayout>

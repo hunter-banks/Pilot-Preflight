@@ -1,0 +1,157 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background View -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3700BCD4" />
+
+    <!-- Brown Overlay View -->
+    <View
+        android:id="@+id/brownOverlay"
+        android:background="@drawable/rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/choose_profile_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:text="Choose a profile image"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/choose_profile_text_view"
+        android:layout_marginTop="16dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:padding="16dp">
+
+        <!-- ImageButton 1 -->
+
+        <!-- ImageButton 2 -->
+        <ImageButton
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/camera" />
+
+        <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/image" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            />
+
+        <!-- ImageButton 4 -->
+        <ImageButton
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/default_profile"
+            app:tint="#FF0000" />
+
+        <!-- ImageButton 5 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#0000FF" />
+
+        <!-- ImageButton 6 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#00FF00" />
+
+        <!-- ImageButton 7 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#FFFF00" />
+
+        <!-- ImageButton 8 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#800080" />
+
+        <!-- ImageButton 9 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#FFA500" />
+
+        <!-- Adjusted ImageButton 10 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#00FFFF" />
+
+        <!-- Adjusted ImageButton 11 -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/default_profile"
+            android:background="#00FFFFFF"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="30dp"
+            app:tint="#FF1493" />
+
+    </GridLayout>
+</RelativeLayout>

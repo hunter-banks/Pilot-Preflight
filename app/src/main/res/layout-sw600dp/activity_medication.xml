@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicationActivity">
+
+    <TextView
+        android:id="@+id/medication_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/medication"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Headline"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/medication_header_text"
+        android:padding="10dp">
+
+        <GridLayout
+            android:id="@+id/medication_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:paddingHorizontal="10dp"
+            >
+
+            <CheckBox
+                android:id="@+id/medication_verify_checkbox"
+                android:text="@string/checked_and_verified_all_medications_for_aviation_compatibility"
+                />
+
+            <CheckBox
+                android:id="@+id/medication_impair"
+                android:text="@string/no_use_of_over_the_counter_medications_that_may_impair_performance"
+                />
+
+            <CheckBox
+                android:id="@+id/medication_violate"
+                android:text="@string/verified_that_medications_do_not_violate_aviation_regulations"
+                />
+
+            <CheckBox
+                android:id="@+id/medication_inform_ame"
+                android:text="@string/informed_aviation_medical_examiner_about_medications"
+                />
+        </GridLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/imsafe_continue_stress_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/medication_grid"
+        android:layout_centerHorizontal="true"
+        style="@style/landing_button"
+        android:text="@string/continue_to_stress_section"
+        />
+</RelativeLayout>
