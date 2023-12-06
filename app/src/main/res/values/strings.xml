@@ -1,7 +1,7 @@
 <resources>
     <string name="imsafe_description">
         The “IMSAFE” acronym is a personal checklist that ensures the following statement
-        is valid: \nI’m physically and mentally safe to fly</string>
+        is valid: \nI’m physically and mentally safe to fly.</string>
     <string name="stress">Stress</string>
     <string name="physically_and_mentally_fit_for_flight">Physically and mentally fit for flight.</string>
     <string name="no_excessive_stress_or_emotional_strain">No excessive stress or emotional strain.</string>
@@ -80,6 +80,13 @@
     <string name="complete_evaluation">Complete Evaluation</string>
     <string name="return_home">Return Home</string>
     <string name="welcome_pilot">Welcome, Pilot!</string>
+    <string name="fatigue">Fatigue</string>
+    <string name="evaluation_results">Evaluation Results</string>
+    <string name="previous_exam_date">Previous Exam Date</string>
+    <string name="select_date"><![CDATA[Select Date -->]]></string>
+    <string name="select_a_date">Select a date.</string>
+    <string name="weather_resources">Weather Resources</string>
+    <string name="loading_weather">Loading Weather...</string>
 
 
 </resources>

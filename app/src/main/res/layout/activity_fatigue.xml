@@ -11,7 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Fatigue"
+        android:text="@string/fatigue"
+        android:textSize="50sp"
+        android:layout_marginBottom="15dp"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         />
@@ -22,26 +24,37 @@
         android:columnCount="1"
         android:layout_below="@id/fatigue_header_text"
         android:paddingHorizontal="10dp"
+
         >
         <CheckBox
             android:id="@+id/fatigue_symptom_checkbox"
             android:text="@string/well_rested_and_free_from_fatigue"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/fatigue_duty_limits"
             android:text="@string/adhered_to_duty_rest_regulations"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/fatigue_mental"
             android:text="@string/no_signs_of_physical_or_mental_exhaustion"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/fatigue_work_hours"
             android:text="@string/avoided_consecutive_long_work_shifts"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/fatigue_management"
             android:text="@string/utilized_fatigue_risk_management_strategies"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
     </GridLayout>
     <Button

@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/emotion"
+        android:textSize="50sp"
+        android:layout_marginBottom="15dp"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         />
@@ -22,26 +24,37 @@
         android:columnCount="1"
         android:layout_below="@id/emotion_header_text"
         android:paddingHorizontal="10dp"
+
         >
         <CheckBox
             android:id="@+id/emotion_symptom_checkbox"
             android:text="@string/hydrated_and_well_nourished"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/emotion_past_meal"
             android:text="@string/consumed_a_balanced_meal_within_the_last_4_hours"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/emotion_future_meal"
             android:text="@string/considered_the_timing_of_meals_to_avoid_fatigue"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/emotion_outlook"
             android:text="@string/positive_emotional_outlook_toward_the_flight"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/emotion_normal"
             android:text="@string/no_unresolved_conflicts_impacting_emotional_well_being"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
     </GridLayout>
     <Button

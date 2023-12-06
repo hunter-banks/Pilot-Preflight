@@ -1,4 +1,3 @@
-<!-- item_layout.xml -->
 <LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
@@ -14,10 +13,9 @@ android:orientation="vertical">
     android:textSize="20sp"
     />
 
-<!-- Divider line -->
 <View
     android:layout_width="match_parent"
     android:layout_height="1dp"
-    android:background="#C0C0C0" /> <!-- Grey color -->
+    android:background="#C0C0C0" />
 
 </LinearLayout>

@@ -13,6 +13,8 @@
         android:layout_centerHorizontal="true"
         android:text="@string/stress"
         android:textStyle="bold"
+        android:textSize="50sp"
+        android:layout_marginBottom="15dp"
         style="@style/TextAppearance.AppCompat.Headline"
         />
     <GridLayout
@@ -26,22 +28,32 @@
         <CheckBox
             android:id="@+id/stress_symptom_checkbox"
             android:text="@string/physically_and_mentally_fit_for_flight"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/stress_impair_checkbox"
             android:text="@string/no_excessive_stress_or_emotional_strain"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/stress_recent_event_checkbox"
             android:text="@string/no_recent_traumatic_events_affecting_mental_state"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/stress_coping_checkbox"
             android:text="@string/adequate_coping_mechanisms_for_stress"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
         <CheckBox
             android:id="@+id/stress_unresolved_checkbox"
             android:text="@string/no_unresolved_personal_or_professional_issues"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
             />
     </GridLayout>
     <Button
