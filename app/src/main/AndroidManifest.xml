@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -13,20 +17,25 @@
         android:theme="@style/Theme.Pilot_preflight"
         tools:targetApi="31">
         <activity
+            android:name=".WeatherActivity"
+            android:exported="false"
+            android:label="Weather"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".EvaluationResultsActivity"
+            android:exported="false"
             android:label="EvaluationResult"
-            android:parentActivityName=".EmotionActivity"
-            android:exported="false" />
+            android:parentActivityName=".EmotionActivity" />
         <activity
             android:name=".EmotionActivity"
+            android:exported="false"
             android:label="Emotion"
-            android:parentActivityName=".FatigueActivity"
-            android:exported="false" />
+            android:parentActivityName=".FatigueActivity" />
         <activity
             android:name=".FatigueActivity"
+            android:exported="false"
             android:label="Fatigue"
-            android:parentActivityName=".AlcoholActivity"
-            android:exported="false" />
+            android:parentActivityName=".AlcoholActivity" />
         <activity
             android:name=".AlcoholActivity"
             android:exported="false"
@@ -67,7 +76,6 @@
             android:exported="false"
             android:label="Previous Evaluations"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

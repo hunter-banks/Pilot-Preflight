@@ -67,6 +67,11 @@
             style="@style/landing_button"
             android:text="@string/aviation_medical_resources" />
 
+        <Button
+            android:id="@+id/weather_resources"
+            style="@style/landing_button"
+            android:text="@string/weather_resources" />
+
 
     </GridLayout>
 
